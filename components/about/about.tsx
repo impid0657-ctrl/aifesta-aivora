@@ -33,7 +33,7 @@ const BG_STYLE = {
 
 /* ================================ */
 
-export default function AboutSection() {
+export default function AboutSection({ hideMarquee = false }: { hideMarquee?: boolean }) {
   return (
     <section className="about pt-140">
       <div className="container">
@@ -57,27 +57,29 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div
-        className="xb-about-img-wrap bg_img marquee-container"
-        style={BG_STYLE}
-      >
-        <div className="marquee-track">
-          {MARQUEE_IMAGES.map((img, index) => (
-            <div
-              key={index}
-              className="xb-about-img-item img-hove-effect"
-            >
-              <div className="xb-img">
-                {REPEAT.map((_, i) => (
-                  <Link href="#" key={i}>
-                    <Image src={img} alt="AI Festa" />
-                  </Link>
-                ))}
+      {!hideMarquee && (
+        <div
+          className="xb-about-img-wrap bg_img marquee-container"
+          style={BG_STYLE}
+        >
+          <div className="marquee-track">
+            {MARQUEE_IMAGES.map((img, index) => (
+              <div
+                key={index}
+                className="xb-about-img-item img-hove-effect"
+              >
+                <div className="xb-img">
+                  {REPEAT.map((_, i) => (
+                    <Link href="#" key={i}>
+                      <Image src={img} alt="AI Festa" />
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
