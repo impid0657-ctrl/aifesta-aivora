@@ -7,78 +7,127 @@ import Image from "next/image";
 
 // Images
 import bgImage from "@/public/images/bg/testimonial-bg.png";
-import gifShape from "@/public/images/icon/animated-gif03.gif";
 
-import avatar1 from "@/public/images/avatar/img01.jpg";
-import avatar2 from "@/public/images/avatar/img02.jpg";
-import avatar3 from "@/public/images/avatar/img03.jpg";
-import avatar4 from "@/public/images/avatar/img04.jpg";
-import avatar5 from "@/public/images/avatar/img05.jpg";
+import newsImg1 from "@/public/images/about/img01.jpg";
+import newsImg2 from "@/public/images/about/img02.jpg";
+import newsImg3 from "@/public/images/about/img03.jpg";
 
-// Testimonial data
-const testimonials = [
+// News data
+const newsItems = [
   {
     id: 1,
-    source: "참가기업",
-    rating: "5.0",
-    content:
-      "\u201CAI Festa 비즈매칭을 통해 3건의 실제 계약으로 이어졌습니다. 기대 이상의 네트워킹 기회였습니다.\u201D",
-    name: "김지현",
-    designation: "AI 스타트업 대표",
-    avatar: avatar1,
+    title: "AI Festa 2026 멤버십 데이 부스 신청 안내",
+    image: newsImg1,
+    date: "2026.03.08",
+    category: "공지사항",
+    excerpt:
+      "멤버십 데이 참가기업을 대상으로 우선 부스 신청이 시작됩니다. 일반기업 신청은 4월 중 오픈 예정입니다.",
   },
   {
     id: 2,
-    source: "참가기업",
-    rating: "4.9",
-    content:
-      "\u201C초거대 AI Summit에서 글로벌 AI 트렌드를 한눈에 파악할 수 있었습니다. 국내 유일한 수준의 컨퍼런스입니다.\u201D",
-    name: "박성호",
-    designation: "AI 연구소장",
-    avatar: avatar2,
+    title: "AI Week 2026 — 10월 코엑스 C홀 개최 확정",
+    image: newsImg2,
+    date: "2026.02.25",
+    category: "보도자료",
+    excerpt:
+      "AI Week 2026 – AI Festa가 오는 10월 6일부터 8일까지 서울 코엑스 3층 C홀에서 개최됩니다.",
   },
   {
     id: 3,
-    source: "참가기업",
-    rating: "5.0",
-    content:
-      "\u201C전시 참가를 통해 20개 이상의 신규 리드를 확보했습니다. B2B 행사로는 최고의 ROI였습니다.\u201D",
-    name: "이준혁",
-    designation: "SaaS 기업 사업개발 팀장",
-    avatar: avatar3,
+    title: "AI Festa 2025 성료 — 참관객 6만명 돌파",
+    image: newsImg3,
+    date: "2025.10.15",
+    category: "보도자료",
+    excerpt:
+      "AI Festa 2025가 성황리에 막을 내렸습니다. 3일간 6만명의 참관객이 방문하며 역대 최대 규모를 기록했습니다.",
   },
   {
     id: 4,
-    source: "참가기업",
-    rating: "5.0",
-    content:
-      "\u201C디지털 미래혁신대상 수상 이후 브랜드 인지도가 크게 올랐습니다. 후속 투자 유치에도 큰 도움이 되었습니다.\u201D",
-    name: "최수영",
-    designation: "AI 솔루션 기업 CEO",
-    avatar: avatar4,
+    title: "AI Festa 2025 사전등록 마감 임박 안내",
+    image: newsImg1,
+    date: "2025.09.20",
+    category: "공지사항",
+    excerpt:
+      "AI Festa 2025 참관객 사전등록이 곧 마감됩니다. 사전등록 시 무료 입장 및 우선 입장 혜택이 제공됩니다.",
   },
   {
     id: 5,
-    source: "참가기업",
-    rating: "4.7",
-    content:
-      "\u201CFuture Tech Conference 연사로 참여한 경험이 매우 좋았습니다. 참관객 수준이 높아 질의응답이 풍부했습니다.\u201D",
-    name: "정민우",
-    designation: "AI 플랫폼 기업 CTO",
-    avatar: avatar5,
+    title: "글로벌 AI 컨퍼런스 연사 라인업 공개",
+    image: newsImg2,
+    date: "2025.08.10",
+    category: "보도자료",
+    excerpt:
+      "OpenAI, Cohere, Perplexity 등 글로벌 AI 기업 리더들이 AI Festa 2025 컨퍼런스 연사로 참여합니다.",
   },
   {
     id: 6,
-    source: "참가기업",
-    rating: "5.0",
-    content:
-      "\u201CQuantum Forum에서 양자컴퓨팅과 AI 결합 인사이트를 얻었습니다. 차세대 기술 트렌드를 미리 파악할 수 있는 자리였습니다.\u201D",
-    name: "한소희",
-    designation: "양자 기술 기업 팀장",
-    avatar: avatar3,
+    title: "디지털 미래혁신대상 수상 기업 발표",
+    image: newsImg3,
+    date: "2025.07.05",
+    category: "공지사항",
+    excerpt:
+      "AI Festa 2025 디지털 미래혁신대상 수상 기업이 발표되었습니다. 장관상 3점, 시장상 3점 등 총 18개 시상.",
   },
 ];
 
+const cardStyle: React.CSSProperties = {
+  background: "rgba(255,255,255,0.05)",
+  borderRadius: "16px",
+  overflow: "hidden",
+  border: "1px solid rgba(255,255,255,0.08)",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+};
+
+const imgWrapStyle: React.CSSProperties = {
+  width: "100%",
+  height: "200px",
+  overflow: "hidden",
+  position: "relative",
+};
+
+const bodyStyle: React.CSSProperties = {
+  padding: "20px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
+  flex: 1,
+};
+
+const metaStyle: React.CSSProperties = {
+  display: "flex",
+  gap: "12px",
+  fontSize: "13px",
+  opacity: 0.6,
+};
+
+const titleStyle: React.CSSProperties = {
+  fontSize: "17px",
+  fontWeight: 600,
+  lineHeight: 1.4,
+  color: "#fff",
+  margin: 0,
+};
+
+const excerptStyle: React.CSSProperties = {
+  fontSize: "14px",
+  lineHeight: 1.6,
+  opacity: 0.7,
+  margin: 0,
+  flex: 1,
+};
+
+const btnStyle: React.CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "6px",
+  fontSize: "14px",
+  fontWeight: 600,
+  color: "var(--thm-color, #09ff78)",
+  textDecoration: "none",
+  marginTop: "auto",
+};
 
 export default function TestimonialSection() {
   return (
@@ -103,43 +152,39 @@ export default function TestimonialSection() {
         <Swiper
           modules={[Autoplay]}
           loop
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           speed={700}
-          spaceBetween={30}
+          spaceBetween={24}
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-            1600: { slidesPerView: 5 },
+            1600: { slidesPerView: 4 },
           }}
         >
-          {testimonials.map((item) => (
+          {newsItems.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="xb-testimonial-item">
-                <div className="xb-item--inner xb-border">
-                  <ul className="xb-item--rating list-unstyled ul_li">
-                    <li>
-                      <i className="fa-solid fa-star"></i>
-                    </li>
-                    <li>{item.source}</li>
-                    <li>{item.rating}</li>
-                  </ul>
-
-                  <p className="xb-item--content">{item.content}</p>
-
-                  <div className="xb-item--author ul_li">
-                    <div className="xb-item--avatar">
-                      <Image src={item.avatar} alt={item.name} />
-                    </div>
-                    <div className="xb-item--holder">
-                      <h3 className="xb-item--name">{item.name}</h3>
-                      <span className="xb-item--desig">
-                        {item.designation}
-                      </span>
-                    </div>
+              <div style={cardStyle}>
+                <div style={imgWrapStyle}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div style={bodyStyle}>
+                  <div style={metaStyle}>
+                    <span>{item.date}</span>
+                    <span>{item.category}</span>
                   </div>
-
+                  <h3 style={titleStyle}>{item.title}</h3>
+                  <p style={excerptStyle}>{item.excerpt}</p>
+                  <a href="#" onClick={(e) => e.preventDefault()} style={btnStyle}>
+                    자세히보기
+                    <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px" }}></i>
+                  </a>
                 </div>
               </div>
             </SwiperSlide>
