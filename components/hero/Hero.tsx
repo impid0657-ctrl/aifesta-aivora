@@ -32,7 +32,7 @@ const ArrowIcon = () => (
   </>
 );
 
-export default function HeroSection({ hideFeatures = false }: { hideFeatures?: boolean }) {
+export default function HeroSection({ hideFeatures = false, hideButtons = false }: { hideFeatures?: boolean; hideButtons?: boolean }) {
   return (
     <section
       className="hero hero-style pos-rel bg_img"
@@ -53,7 +53,7 @@ export default function HeroSection({ hideFeatures = false }: { hideFeatures?: b
               </p>
 
               {/* BUTTONS */}
-              <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '3px' }}>
+              {!hideButtons && <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '3px' }}>
                 <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">참관객 사전등록</span>
                   <span className="arrow">
@@ -86,7 +86,7 @@ export default function HeroSection({ hideFeatures = false }: { hideFeatures?: b
                     </span>
                   </span>
                 </Link>
-              </div>
+              </div>}
             </div>
           </div>
 

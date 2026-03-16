@@ -28,7 +28,7 @@ export default function HomePage() {
           <Header />
 
           <main>
-            <HeroSection hideFeatures />
+            <HeroSection hideFeatures hideButtons />
             <AboutSection hideMarquee />
             {/* 비활성화: ServiceSection (주요 프로그램 아코디언) — 아이보라 서비스 */}
             {/* <ServiceSection /> */}
