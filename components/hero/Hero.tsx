@@ -44,17 +44,41 @@ export default function HeroSection() {
           <div className="col-lg-9 col-md-9">
             <div className="hero-content">
               <h2 className="title scale-animation wow">
-                대한민국 최대 규모 AI 페스티벌<br />AI Festa 2026
+                AI Week 2026<br /><br />AI Festa
               </h2>
 
               <p className="sub-title scale-animation wow">
-                모두의 AI, AI Everything AI Everywhere 글로벌 AI 컨퍼런스, 전시, 비즈매칭이<br />한 자리에 모이는 대한민국 최대 AI 행사. 2026.10.6(화)~10.8(목), 코엑스 3층 C홀.
+                대한민국 최대 규모 AI 페스티벌<br />2026.10.6.(화) – 10.8.(목) | 코엑스 3층 C홀
               </p>
 
-              {/* BUTTON */}
-              <div className="hero-btn scale-animation wow">
-                <Link className="thm-btn agency-btn" href="#">
-                  <span className="text">참가 신청하기</span>
+              {/* BUTTONS */}
+              <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                  <span className="text">참관객 사전등록</span>
+                  <span className="arrow">
+                    <span className="arrow-icon">
+                      <ArrowIcon />
+                    </span>
+                  </span>
+                </Link>
+                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                  <span className="text">전시참가 등록</span>
+                  <span className="arrow">
+                    <span className="arrow-icon">
+                      <ArrowIcon />
+                    </span>
+                  </span>
+                </Link>
+                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                  <span className="text">비즈매칭 등록</span>
+                  <span className="arrow">
+                    <span className="arrow-icon">
+                      <ArrowIcon />
+                    </span>
+                  </span>
+                </Link>
+                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                  <span className="text">브로셔 다운로드</span>
                   <span className="arrow">
                     <span className="arrow-icon">
                       <ArrowIcon />
