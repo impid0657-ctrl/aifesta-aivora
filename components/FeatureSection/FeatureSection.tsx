@@ -54,7 +54,7 @@ export default function FeaturesAndBrands({ hideTitle = false, compactMode = fal
                     data-wow-duration="600ms"
                   >
                     <div className="xb-item--inner justify-content-end xb-border" style={compactMode ? { padding: '30px 24px' } : {}}>
-                      <h2 className="xb-item--title text-end" style={compactMode ? { fontSize: '1.3em' } : {}}>
+                      <h2 className="xb-item--title text-end" style={compactMode ? { fontSize: '2.6em' } : {}}>
                         {i === 0 && <>참관객<br />60,000+</>}
                         {i === 1 && <>부스 조성<br />466+</>}
                         {!compactMode && i === 2 && <>강연·패널 130건+<br />참관객 6만명+</>}
@@ -82,7 +82,7 @@ export default function FeaturesAndBrands({ hideTitle = false, compactMode = fal
                       <span className="xb-item--icon">
                         <Image src={icon} alt="icon" />
                       </span>
-                      <h2 className="xb-item--title" style={compactMode ? { fontSize: '1.3em' } : {}}>
+                      <h2 className="xb-item--title" style={compactMode ? { fontSize: '2.6em' } : {}}>
                         {i === 0 && <>참여기업<br />203+</>}
                         {i === 1 && <>강연 및 패널<br />130+</>}
                         {!compactMode && i === 2 && <>사전등록 시<br />무료 참관 가능</>}
