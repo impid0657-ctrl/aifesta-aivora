@@ -55,8 +55,8 @@ export default function FeaturesAndBrands({ hideTitle = false, compactMode = fal
                   >
                     <div className="xb-item--inner justify-content-end xb-border" style={compactMode ? { padding: '30px 24px' } : {}}>
                       <h2 className="xb-item--title text-end">
-                        {compactMode && i === 0 && <>참관객<br /><span style={{ fontSize: '2.6em' }}>60,000+</span></>}
-                        {compactMode && i === 1 && <>부스 조성<br /><span style={{ fontSize: '2.6em' }}>466+</span></>}
+                        {compactMode && i === 0 && <>참관객<br /><span style={{ fontSize: '35px', display: 'block', marginTop: '8px' }}>60,000+</span></>}
+                        {compactMode && i === 1 && <>부스 조성<br /><span style={{ fontSize: '35px', display: 'block', marginTop: '8px' }}>466+</span></>}
                         {!compactMode && i === 0 && <>참관객<br />60,000+</>}
                         {!compactMode && i === 1 && <>부스 조성<br />466+</>}
                         {!compactMode && i === 2 && <>강연·패널 130건+<br />참관객 6만명+</>}
@@ -85,8 +85,8 @@ export default function FeaturesAndBrands({ hideTitle = false, compactMode = fal
                         <Image src={icon} alt="icon" />
                       </span>
                       <h2 className="xb-item--title">
-                        {compactMode && i === 0 && <>참여기업<br /><span style={{ fontSize: '2.6em' }}>203+</span></>}
-                        {compactMode && i === 1 && <>강연 및 패널<br /><span style={{ fontSize: '2.6em' }}>130+</span></>}
+                        {compactMode && i === 0 && <>참여기업<br /><span style={{ fontSize: '35px', display: 'block', marginTop: '8px' }}>203+</span></>}
+                        {compactMode && i === 1 && <>강연 및 패널<br /><span style={{ fontSize: '35px', display: 'block', marginTop: '8px' }}>130+</span></>}
                         {!compactMode && i === 0 && <>참여기업<br />203+</>}
                         {!compactMode && i === 1 && <>강연 및 패널<br />130+</>}
                         {!compactMode && i === 2 && <>사전등록 시<br />무료 참관 가능</>}
