@@ -34,9 +34,10 @@ export default function HomePage() {
             {/* <ServiceSection /> */}
             <FeatureSection />
             <ProjectSection />
-            <IndustriesMarqueeSection />
-            <IndustriesSection />
-            <ContactSection />
+            {/* 비활성화: IndustriesMarquee ~ Contact — 아이보라 서비스 */}
+            {/* <IndustriesMarqueeSection /> */}
+            {/* <IndustriesSection /> */}
+            {/* <ContactSection /> */}
             <TestimonialSection />
             <BlogSection />
           </main>
