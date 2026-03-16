@@ -1,0 +1,6 @@
+/* Feature section compact mode - mobile fix */
+@media (max-width: 768px) {
+  .xb-feature-item2 .xb-item--title {
+    line-height: 1.6 !important;
+  }
+}

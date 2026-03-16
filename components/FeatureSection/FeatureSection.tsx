@@ -10,6 +10,7 @@ import feaIcon06 from "@/public/images/icon/fea-small-icon06.svg";
 import featureImg01 from "@/public/images/feature/feature-img01.png";
 import BrandSection from "./BrandSection";
 import Image from "next/image";
+import "./feature-custom.css";
 
 export default function FeaturesAndBrands({ hideTitle = false, compactMode = false }: { hideTitle?: boolean; compactMode?: boolean }) {
   return (
