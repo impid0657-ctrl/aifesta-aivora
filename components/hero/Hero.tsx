@@ -43,8 +43,8 @@ export default function HeroSection({ hideFeatures = false }: { hideFeatures?: b
           {/* LEFT CONTENT */}
           <div className="col-lg-9 col-md-9">
             <div className="hero-content">
-              <h2 className="title scale-animation wow">
-                AI Week 2026<br /><br />AI Festa
+              <h2 className="title scale-animation wow" style={{ fontSize: '130%' }}>
+                AI Week 2026<br />AI Festa
               </h2>
 
               <p className="sub-title scale-animation wow">
