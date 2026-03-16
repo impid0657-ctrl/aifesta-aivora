@@ -44,7 +44,7 @@ export default function HeaderClient() {
   }, []);
 
   /* ================================
-      Memoized Handlers (unused but kept for template integrity)
+      Memoized Handlers
   ================================= */
   const toggleMobileMenu = useCallback(() => {
     setMobileActive((prev) => !prev);
@@ -73,17 +73,17 @@ export default function HeaderClient() {
           ${isVisible ? "xb-header-fixed" : "xb-header-hidden"}`}
       >
         <div className="container mxw-1650">
-          <div className="header__wrap" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="header__wrap ul_li_between">
 
-            {/* Logo — 가운데 정렬 */}
+            {/* Logo */}
             <div className="xb-header-logo">
               <Link href="/" className="logo1">
                 <Image src={logo} alt="Logo" priority />
               </Link>
             </div>
 
-            {/* Desktop Menu — 비활성화 (아이보라 서비스) */}
-            {/*<div className="main-menu__wrap navbar navbar-expand-lg p-0">
+            {/* Desktop Menu */}
+            <div className="main-menu__wrap navbar navbar-expand-lg p-0">
               <nav className="main-menu collapse navbar-collapse">
                 <ul>
                   <li className="menu-item-has-children active">
@@ -118,25 +118,25 @@ export default function HeaderClient() {
                   <li><Link href="#" onClick={preventDefault}>문의</Link></li>
                 </ul>
               </nav>
-            </div>*/}
+            </div>
 
-            {/* Header Button — 비활성화 (아이보라 서비스) */}
-            {/*<div className="header-btn">
+            {/* Header Button */}
+            <div className="header-btn">
               <Link href="#" onClick={preventDefault} className="thm-btn">
                 참가 신청
               </Link>
-            </div>*/}
+            </div>
 
-            {/* Mobile Toggle — 비활성화 (아이보라 서비스) */}
-            {/*<div className="header-bar-mobile side-menu d-lg-none">
+            {/* Mobile Toggle */}
+            <div className="header-bar-mobile side-menu d-lg-none">
               <button className="xb-nav-mobile" onClick={toggleMobileMenu}>
                 <i className="far fa-bars"></i>
               </button>
-            </div>*/}
+            </div>
           </div>
 
-          {/* Mobile Menu — 비활성화 (아이보라 서비스) */}
-          {/*<div className="xb-header-wrap">
+          {/* Mobile Menu */}
+          <div className="xb-header-wrap">
             <div className={`xb-header-menu ${mobileActive ? "active" : ""}`}>
               <div className="xb-header-menu-scroll">
 
@@ -171,7 +171,7 @@ export default function HeaderClient() {
               className="xb-header-menu-backdrop"
               onClick={closeMobileMenu}
             />
-          </div>*/}
+          </div>
 
         </div>
       </div>

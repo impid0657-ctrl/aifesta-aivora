@@ -11,6 +11,7 @@ import "../styles/mousecursor.css";
 import "../styles/imageRevealHover.css";
 import "../styles/custom-fonts.css";
 import "../styles/main.css";
+import "../styles/service-overrides.css";
 
 export const metadata: Metadata = {
   title: "AI FESTA 2026",
