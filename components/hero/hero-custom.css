@@ -1,0 +1,11 @@
+/* Hero title responsive */
+.hero-title-custom {
+  font-size: 120px !important;
+  line-height: 1.1 !important;
+}
+
+@media (max-width: 768px) {
+  .hero-title-custom {
+    font-size: 60px !important;
+  }
+}

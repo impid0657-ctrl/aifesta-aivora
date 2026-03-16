@@ -7,6 +7,7 @@ import heroIcon from "@/public/images/icon/animated-gif02.gif";
 import featureIcon1 from "@/public/images/icon/feature-icon01.svg";
 import featureIcon2 from "@/public/images/icon/feature-icon02.svg";
 import featureIcon3 from "@/public/images/icon/feature-icon03.svg";
+import "./hero-custom.css";
 
 const ArrowIcon = () => (
   <>
@@ -43,7 +44,7 @@ export default function HeroSection({ hideFeatures = false }: { hideFeatures?: b
           {/* LEFT CONTENT */}
           <div className="col-lg-9 col-md-9">
             <div className="hero-content">
-              <h2 className="title scale-animation wow" style={{ fontSize: '120px', lineHeight: '1.1' }}>
+              <h2 className="title scale-animation wow hero-title-custom">
                 AI Week 2026<br />AI Festa
               </h2>
 
