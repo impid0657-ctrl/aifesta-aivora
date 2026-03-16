@@ -40,7 +40,8 @@ export default function HomePage() {
             {/* <IndustriesSection /> */}
             {/* <ContactSection /> */}
             <TestimonialSection />
-            <BlogSection />
+            {/* 비활성화: BlogSection (AI Festa 소식) — 아이보라 서비스 */}
+            {/* <BlogSection /> */}
           </main>
 
           <Footer />
