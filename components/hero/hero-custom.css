@@ -4,6 +4,26 @@
   line-height: 1.1 !important;
 }
 
+/* Hero buttons compact */
+.hero-btn .thm-btn .text {
+  padding: 12px 10px !important;
+}
+
+.hero-btn .thm-btn .arrow {
+  width: 50px !important;
+  min-width: 50px !important;
+  padding: 4px !important;
+}
+
+.hero-btn .thm-btn .arrow-icon {
+  width: 40px !important;
+}
+
+.hero-btn .thm-btn .arrow-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
 @media (max-width: 768px) {
   .hero-title-custom {
     font-size: 60px !important;
