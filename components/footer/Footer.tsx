@@ -118,7 +118,7 @@ export default function Footer() {
         <div className="xb-footer-bottom">
           <div className="contact-item">
             <Image src={locationIcon} alt="location" />
-            <span className="contact-method">서울시 마포구 양화로111 지은빌딩 3층</span>
+            
           </div>
 
           <div className="contact-item copyright-item">
