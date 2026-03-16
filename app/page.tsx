@@ -33,7 +33,8 @@ export default function HomePage() {
             {/* 비활성화: ServiceSection (주요 프로그램 아코디언) — 아이보라 서비스 */}
             {/* <ServiceSection /> */}
             <FeatureSection />
-            <ProjectSection />
+            {/* 비활성화: ProjectSection (4개 존 배너) — 아이보라 서비스 */}
+            {/* <ProjectSection /> */}
             {/* 비활성화: IndustriesMarquee ~ Contact — 아이보라 서비스 */}
             {/* <IndustriesMarqueeSection /> */}
             {/* <IndustriesSection /> */}
