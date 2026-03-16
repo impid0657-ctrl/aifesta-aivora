@@ -6,29 +6,8 @@
    - 풀/원본에는 ServiceMarker가 없으므로 오버라이드 적용 안 됨
    - main.css는 절대 수정하지 않음 — 모든 시각 변경은 여기서 처리
    
-   Last Updated: 2026-03-16
+   Last Updated: 2026-03-17
    ============================================================= */
-
-/* === Header: 메뉴/버튼 숨김, 로고 가운데 === */
-body[data-page="service"] .header__wrap {
-  justify-content: center !important;
-}
-
-body[data-page="service"] .main-menu__wrap {
-  display: none !important;
-}
-
-body[data-page="service"] .header-btn {
-  display: none !important;
-}
-
-body[data-page="service"] .header-bar-mobile {
-  display: none !important;
-}
-
-body[data-page="service"] .xb-header-wrap {
-  display: none !important;
-}
 
 /* === About: 흘러가는 이미지 배너 숨김 === */
 body[data-page="service"] .xb-about-img-wrap {
