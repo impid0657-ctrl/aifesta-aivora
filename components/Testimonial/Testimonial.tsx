@@ -8,9 +8,12 @@ import Image from "next/image";
 // Images
 import bgImage from "@/public/images/bg/testimonial-bg.png";
 
-import newsImg1 from "@/public/images/about/img01.jpg";
-import newsImg2 from "@/public/images/about/img02.jpg";
-import newsImg3 from "@/public/images/about/img03.jpg";
+import newsImg1 from "@/public/images/about/aivora-news-01.jpg";
+import newsImg2 from "@/public/images/about/aivora-news-02.jpg";
+import newsImg3 from "@/public/images/about/aivora-news-03.jpg";
+import newsImg4 from "@/public/images/about/aivora-news-04.jpg";
+import newsImg5 from "@/public/images/about/aivora-news-05.jpg";
+import newsImg6 from "@/public/images/about/aivora-news-06.jpg";
 
 // News data
 const newsItems = [
@@ -44,7 +47,7 @@ const newsItems = [
   {
     id: 4,
     title: "AI Festa 2025 사전등록 마감 임박 안내",
-    image: newsImg1,
+    image: newsImg4,
     date: "2025.09.20",
     category: "공지사항",
     excerpt:
@@ -53,7 +56,7 @@ const newsItems = [
   {
     id: 5,
     title: "글로벌 AI 컨퍼런스 연사 라인업 공개",
-    image: newsImg2,
+    image: newsImg5,
     date: "2025.08.10",
     category: "보도자료",
     excerpt:
@@ -62,7 +65,7 @@ const newsItems = [
   {
     id: 6,
     title: "디지털 미래혁신대상 수상 기업 발표",
-    image: newsImg3,
+    image: newsImg6,
     date: "2025.07.05",
     category: "공지사항",
     excerpt:
