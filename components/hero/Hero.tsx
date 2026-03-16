@@ -31,7 +31,7 @@ const ArrowIcon = () => (
   </>
 );
 
-export default function HeroSection() {
+export default function HeroSection({ hideFeatures = false }: { hideFeatures?: boolean }) {
   return (
     <section
       className="hero hero-style pos-rel bg_img"
@@ -102,7 +102,7 @@ export default function HeroSection() {
         </div>
 
         {/* FEATURES */}
-        <div className="row mt-55">
+        {!hideFeatures && <div className="row mt-55">
 
           {/* Feature 1 */}
           <div className="col-lg-4 col-md-6 mt-30">
@@ -149,7 +149,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-        </div>
+        </div>}
 
       </div>
     </section>
