@@ -11,6 +11,7 @@ import TestimonialSection from "@/components/Testimonial/Testimonial";
 import BlogSection from "@/components/BlogSection/BlogSection";
 import Footer from "@/components/footer/Footer";
 import Scrollbar from "@/components/scrollbar/scrollbar";
+import ServiceMarker from "@/components/ServiceMarker/ServiceMarker";
 
 export const metadata = {
   title: "AI FESTA 2026 | AI Week 2026 공식 페스티벌",
@@ -21,6 +22,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
+      <ServiceMarker />
       <div className="ai-agency">
         <div className="body_wrap o-clip">
           <Header />
@@ -28,7 +30,8 @@ export default function HomePage() {
           <main>
             <HeroSection />
             <AboutSection />
-            <ServiceSection />
+            {/* 비활성화: ServiceSection (주요 프로그램 아코디언) — 아이보라 서비스 */}
+            {/* <ServiceSection /> */}
             <FeatureSection />
             <ProjectSection />
             <IndustriesMarqueeSection />
