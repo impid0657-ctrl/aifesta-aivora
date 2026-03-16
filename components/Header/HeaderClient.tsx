@@ -9,7 +9,7 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 import MegaMenu1 from "./MegaMenu1";
 import MegaMenuServices from "./MegaMenu2";
 
-export default function HeaderClient() {
+export default function HeaderClient({ disableNav = false }: { disableNav?: boolean }) {
   const [isSticky, setIsSticky] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [mobileActive, setMobileActive] = useState(false);
@@ -86,33 +86,37 @@ export default function HeaderClient() {
             <div className="main-menu__wrap navbar navbar-expand-lg p-0">
               <nav className="main-menu collapse navbar-collapse">
                 <ul>
-                  <li className="menu-item-has-children active">
+                  <li className={disableNav ? "" : "menu-item-has-children active"}>
                     <Link href="#" onClick={preventDefault}>홈</Link>
-                    <ul className="submenu">
-                      <li><Link href="/">AI Festa 메인</Link></li>
-                      <li><Link href="#" onClick={preventDefault}>AI Marketing</Link></li>
-                      <li><Link href="#" onClick={preventDefault}>AI Chatbot</Link></li>
-                    </ul>
+                    {!disableNav && (
+                      <ul className="submenu">
+                        <li><Link href="/">AI Festa 메인</Link></li>
+                        <li><Link href="#" onClick={preventDefault}>AI Marketing</Link></li>
+                        <li><Link href="#" onClick={preventDefault}>AI Chatbot</Link></li>
+                      </ul>
+                    )}
                   </li>
 
                   <li><Link href="#" onClick={preventDefault}>행사소개</Link></li>
 
-                  <li className="menu-item-has-children megamenu">
+                  <li className={disableNav ? "" : "menu-item-has-children megamenu"}>
                     <Link href="#" onClick={preventDefault}>프로그램</Link>
-                    <MegaMenu1 />
+                    {!disableNav && <MegaMenu1 />}
                   </li>
 
-                  <li className="menu-item-has-children megamenu">
+                  <li className={disableNav ? "" : "menu-item-has-children megamenu"}>
                     <Link href="#" onClick={preventDefault}>참가안내</Link>
-                    <MegaMenuServices />
+                    {!disableNav && <MegaMenuServices />}
                   </li>
 
-                  <li className="menu-item-has-children">
+                  <li className={disableNav ? "" : "menu-item-has-children"}>
                     <Link href="#" onClick={preventDefault}>미디어</Link>
-                    <ul className="submenu">
-                      <li><Link href="#" onClick={preventDefault}>보도자료</Link></li>
-                      <li><Link href="#" onClick={preventDefault}>공지사항</Link></li>
-                    </ul>
+                    {!disableNav && (
+                      <ul className="submenu">
+                        <li><Link href="#" onClick={preventDefault}>보도자료</Link></li>
+                        <li><Link href="#" onClick={preventDefault}>공지사항</Link></li>
+                      </ul>
+                    )}
                   </li>
 
                   <li><Link href="#" onClick={preventDefault}>문의</Link></li>

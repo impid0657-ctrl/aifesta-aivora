@@ -13,3 +13,14 @@
 body[data-page="service"] .xb-about-img-wrap {
   display: none !important;
 }
+
+/* === Header: 서브메뉴 숨김 + 메뉴 링크 클릭 비활성화 === */
+body[data-page="service"] .main-menu .submenu,
+body[data-page="service"] .main-menu .xb-mega-menu {
+  display: none !important;
+}
+
+body[data-page="service"] .main-menu ul > li > a {
+  pointer-events: none;
+  cursor: default;
+}

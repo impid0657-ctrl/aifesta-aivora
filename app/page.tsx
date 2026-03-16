@@ -25,7 +25,7 @@ export default function HomePage() {
       <ServiceMarker />
       <div className="ai-agency">
         <div className="body_wrap o-clip">
-          <Header />
+          <Header disableNav />
 
           <main>
             <HeroSection hideFeatures hideButtons />
