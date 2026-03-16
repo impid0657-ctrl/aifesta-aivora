@@ -92,9 +92,9 @@ export default function TestimonialSection() {
     >
       <div className="container">
         <div className="sec-title sec-title-center tes-sec-title text-center mb-50">
-          <span className="sub-title mb-15">참가기업 후기</span>
+          <span className="sub-title mb-15">소식 · 정보</span>
           <h2 className="title">
-            참가기업이 전하는 AI Festa
+            AI Festa의 최신 소식을 만나보세요
           </h2>
         </div>
       </div>
