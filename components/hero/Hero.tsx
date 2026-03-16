@@ -53,7 +53,7 @@ export default function HeroSection() {
 
               {/* BUTTONS */}
               <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">참관객 사전등록</span>
                   <span className="arrow">
                     <span className="arrow-icon">
@@ -61,7 +61,7 @@ export default function HeroSection() {
                     </span>
                   </span>
                 </Link>
-                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">전시참가 등록</span>
                   <span className="arrow">
                     <span className="arrow-icon">
@@ -69,7 +69,7 @@ export default function HeroSection() {
                     </span>
                   </span>
                 </Link>
-                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">비즈매칭 등록</span>
                   <span className="arrow">
                     <span className="arrow-icon">
@@ -77,7 +77,7 @@ export default function HeroSection() {
                     </span>
                   </span>
                 </Link>
-                <Link className="thm-btn agency-btn" href="#" style={{ minWidth: '200px', textAlign: 'center' }}>
+                <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">브로셔 다운로드</span>
                   <span className="arrow">
                     <span className="arrow-icon">
