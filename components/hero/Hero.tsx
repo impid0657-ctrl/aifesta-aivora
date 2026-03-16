@@ -53,7 +53,7 @@ export default function HeroSection({ hideFeatures = false }: { hideFeatures?: b
               </p>
 
               {/* BUTTONS */}
-              <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+              <div className="hero-btn scale-animation wow" style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                 <Link className="thm-btn agency-btn" href="#" style={{ flex: '1 1 0', minWidth: '200px', textAlign: 'center' }}>
                   <span className="text">참관객 사전등록</span>
                   <span className="arrow">
