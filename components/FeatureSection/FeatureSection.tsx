@@ -11,7 +11,7 @@ import featureImg01 from "@/public/images/feature/feature-img01.png";
 import BrandSection from "./BrandSection";
 import Image from "next/image";
 
-export default function FeaturesAndBrands() {
+export default function FeaturesAndBrands({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
     <div
       className="bg_img"
@@ -27,16 +27,19 @@ export default function FeaturesAndBrands() {
         <div className="container">
 
           {/* Title */}
-          <div className="sec-title sec-title-center fea-sec-title text-center mb-50">
-            <span className="sub-title">AI Festa를 선택하는 이유</span>
-            <h2 className="title">
-              당신의 성공이{" "}
-              <span>
-                <Image src={diamondIcon} alt="icon" />
-              </span>{" "}
-              우리의 목표입니다
-            </h2>
-          </div>
+          {!hideTitle && (
+            <div className="sec-title sec-title-center fea-sec-title text-center mb-50">
+              <span className="sub-title">AI Festa를 선택하는 이유</span>
+              <h2 className="title">
+                당신의 성공이{" "}
+                <span>
+                  <Image src={diamondIcon} alt="icon" />
+                </span>{" "}
+                우리의 목표입니다
+              </h2>
+            </div>
+          )}
+          {hideTitle && <div style={{ height: '50px' }} />}
 
           <div className="row mt-none-30 align-items-center">
 
