@@ -39,7 +39,9 @@ export default function HomePage() {
             {/* <IndustriesMarqueeSection /> */}
             {/* <IndustriesSection /> */}
             {/* <ContactSection /> */}
-            <TestimonialSection />
+            <div style={{ marginTop: '100px' }}>
+              <TestimonialSection />
+            </div>
             {/* 비활성화: BlogSection (AI Festa 소식) — 아이보라 서비스 */}
             {/* <BlogSection /> */}
           </main>
