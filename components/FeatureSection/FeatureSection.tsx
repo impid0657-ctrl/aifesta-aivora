@@ -11,7 +11,7 @@ import featureImg01 from "@/public/images/feature/feature-img01.png";
 import BrandSection from "./BrandSection";
 import Image from "next/image";
 
-export default function FeaturesAndBrands({ hideTitle = false }: { hideTitle?: boolean }) {
+export default function FeaturesAndBrands({ hideTitle = false, compactMode = false }: { hideTitle?: boolean; compactMode?: boolean }) {
   return (
     <div
       className="bg_img"
@@ -44,20 +44,20 @@ export default function FeaturesAndBrands({ hideTitle = false }: { hideTitle?: b
           <div className="row mt-none-30 align-items-center">
 
             {/* Left Features */}
-            <div className="col-lg-4 col-md-6 mt-30">
+            <div className={compactMode ? "col-lg-4 col-md-6 mt-30" : "col-lg-4 col-md-6 mt-30"}>
               <div className="xb-feature-left-item">
-                {[feaIcon01, feaIcon02, feaIcon03].map((icon, i) => (
+                {(compactMode ? [feaIcon01, feaIcon02] : [feaIcon01, feaIcon02, feaIcon03]).map((icon, i) => (
                   <div
                     key={i}
                     className="xb-feature-item xb-feature-item2 wow fadeInUp"
                     data-wow-delay={`${(i + 1) * 100}ms`}
                     data-wow-duration="600ms"
                   >
-                    <div className="xb-item--inner justify-content-end xb-border">
-                      <h2 className="xb-item--title text-end">
+                    <div className="xb-item--inner justify-content-end xb-border" style={compactMode ? { padding: '30px 24px' } : {}}>
+                      <h2 className="xb-item--title text-end" style={compactMode ? { fontSize: '1.3em' } : {}}>
                         {i === 0 && <>글로벌 AI 리더<br />130건 이상 강연·패널</>}
                         {i === 1 && <>맞춤형 B2B<br />비즈니스 매칭</>}
-                        {i === 2 && <>강연·패널 130건+<br />참관객 6만명+</>}
+                        {!compactMode && i === 2 && <>강연·패널 130건+<br />참관객 6만명+</>}
                       </h2>
                       <span className="xb-item--icon">
                         <Image src={icon} alt="icon" />
@@ -69,23 +69,23 @@ export default function FeaturesAndBrands({ hideTitle = false }: { hideTitle?: b
             </div>
 
             {/* Right Features */}
-            <div className="col-lg-4 col-md-6 order-lg-last mt-30">
+            <div className={compactMode ? "col-lg-4 col-md-6 order-lg-last mt-30" : "col-lg-4 col-md-6 order-lg-last mt-30"}>
               <div className="xb-feature-right-item">
-                {[feaIcon04, feaIcon05, feaIcon06].map((icon, i) => (
+                {(compactMode ? [feaIcon04, feaIcon05] : [feaIcon04, feaIcon05, feaIcon06]).map((icon, i) => (
                   <div
                     key={i}
                     className="xb-feature-item xb-feature-item2 xb-border wow fadeInUp"
                     data-wow-delay={`${(i + 1) * 100}ms`}
                     data-wow-duration="600ms"
                   >
-                    <div className="xb-item--inner xb-border">
+                    <div className="xb-item--inner xb-border" style={compactMode ? { padding: '30px 24px' } : {}}>
                       <span className="xb-item--icon">
                         <Image src={icon} alt="icon" />
                       </span>
-                      <h2 className="xb-item--title">
+                      <h2 className="xb-item--title" style={compactMode ? { fontSize: '1.3em' } : {}}>
                         {i === 0 && <>오프라인 203개사<br />466부스 전시</>}
                         {i === 1 && <>장관상·시장상 등<br />총 18개 시상</>}
-                        {i === 2 && <>사전등록 시<br />무료 참관 가능</>}
+                        {!compactMode && i === 2 && <>사전등록 시<br />무료 참관 가능</>}
                       </h2>
                     </div>
                   </div>
