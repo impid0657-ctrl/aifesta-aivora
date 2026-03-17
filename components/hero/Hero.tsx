@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // Image imports
 import heroBg from "@/public/images/bg/hero_bg.png";
+import videoBg from "@/public/images/bg/logo_video.webp";
 import heroIcon from "@/public/images/icon/animated-gif02.gif";
 import featureIcon1 from "@/public/images/icon/feature-icon01.svg";
 import featureIcon2 from "@/public/images/icon/feature-icon02.svg";
@@ -32,13 +33,29 @@ const ArrowIcon = () => (
   </>
 );
 
-export default function HeroSection({ hideFeatures = false, hideButtons = false }: { hideFeatures?: boolean; hideButtons?: boolean }) {
+export default function HeroSection({ hideFeatures = false, hideButtons = false, useVideoBg = false }: { hideFeatures?: boolean; hideButtons?: boolean; useVideoBg?: boolean }) {
   return (
     <section
       className="hero hero-style pos-rel bg_img"
-      style={{ backgroundImage: `url(${heroBg.src})` }}
+      style={{ backgroundImage: useVideoBg ? 'none' : `url(${heroBg.src})`, position: 'relative', overflow: 'hidden' }}
     >
-      <div className="container">
+      {useVideoBg && (
+        <>
+          <img
+            src={videoBg.src}
+            alt="AI Festa 배경"
+            style={{
+              position: 'absolute', top: '50%', left: '50%',
+              transform: 'translate(-50%, -50%)',
+              minWidth: '100%', minHeight: '100%',
+              width: 'auto', height: 'auto',
+              objectFit: 'cover', zIndex: 0,
+            }}
+          />
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.5)', zIndex: 0 }} />
+        </>
+      )}
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="row">
 
           {/* LEFT CONTENT */}
