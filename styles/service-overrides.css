@@ -9,6 +9,11 @@
    Last Updated: 2026-03-17
    ============================================================= */
 
+/* === Footer: 네비게이션 버튼 숨김 === */
+body[data-page="service"] .xb-footer-nav {
+  display: none !important;
+}
+
 /* === About: 흘러가는 이미지 배너 숨김 === */
 body[data-page="service"] .xb-about-img-wrap {
   display: none !important;
