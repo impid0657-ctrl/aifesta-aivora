@@ -18,6 +18,9 @@ export default function ServiceMarker() {
     const handleNavClick = (e: MouseEvent) => {
       const link = (e.target as HTMLElement).closest("a");
       if (!link) return;
+      // 외부 링크(SNS 등)는 제외
+      const href = link.getAttribute("href") || "";
+      if (href.startsWith("http")) return;
       const inNav = link.closest(".main-menu, .header-btn, .xb-footer-nav, .xb-footer-bottom, .xb-header-nav");
       if (inNav) {
         e.preventDefault();
