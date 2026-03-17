@@ -45,13 +45,15 @@ const TwitterIcon = () => (
 
 const LinkedinIcon = () => <i className="fa-brands fa-linkedin"></i>;
 
+const InstagramIcon = () => <i className="fa-brands fa-instagram"></i>;
+
 const YoutubeIcon = () => <i className="fa-brands fa-square-youtube"></i>;
 
 const socials = [
-  { icon: <FacebookIcon />, name: "Facebook", url: "https://facebook.com" },
-  { icon: <TwitterIcon />, name: "Twitter", url: "https://twitter.com" },
-  { icon: <LinkedinIcon />, name: "LinkedIn", url: "https://linkedin.com" },
-  { icon: <YoutubeIcon />, name: "YouTube", url: "https://youtube.com" },
+  { icon: <FacebookIcon />, name: "Facebook", url: "https://www.facebook.com/aifesta.official?locale=ko_KR" },
+  { icon: <InstagramIcon />, name: "Instagram", url: "https://www.instagram.com/ai.festa/" },
+  { icon: <LinkedinIcon />, name: "LinkedIn", url: "https://www.linkedin.com/in/ai-festa-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%ED%8E%98%EC%8A%A4%ED%83%80-930652318/" },
+  { icon: <YoutubeIcon />, name: "YouTube", url: "https://www.youtube.com/@ZDNetKorea101/featured" },
 ];
 
 export default function Footer() {
