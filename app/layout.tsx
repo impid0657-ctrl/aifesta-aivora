@@ -14,8 +14,19 @@ import "../styles/main.css";
 import "../styles/service-overrides.css";
 
 export const metadata: Metadata = {
-  title: "AI FESTA 2026",
-  description: "AI Week 2026 공식 페스티벌 AI Festa. 2026.10.6(화)~10.8(목) 코엑스 3층 C홀.",
+  title: "인공지능 페스타(AI FESTA) 2026",
+  description: "AI Festa는 과학기술정보통신부가 지정한 국가 공식 '인공지능주간(AI Week)'의 대표 행사로, 대한민국 AI 산업 생태계를 이끄는 글로벌 비즈니스 플랫폼입니다.",
+  openGraph: {
+    title: "인공지능 페스타(AI FESTA) 2026",
+    description: "AI Festa는 과학기술정보통신부가 지정한 국가 공식 '인공지능주간(AI Week)'의 대표 행사로, 대한민국 AI 산업 생태계를 이끄는 글로벌 비즈니스 플랫폼입니다.",
+    type: "website",
+    url: "https://aifesta.kr",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "인공지능 페스타(AI FESTA) 2026",
+    description: "AI Festa는 과학기술정보통신부가 지정한 국가 공식 '인공지능주간(AI Week)'의 대표 행사로, 대한민국 AI 산업 생태계를 이끄는 글로벌 비즈니스 플랫폼입니다.",
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
