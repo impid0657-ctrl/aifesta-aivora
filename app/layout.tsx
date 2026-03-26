@@ -16,6 +16,12 @@ import "../styles/service-overrides.css";
 export const metadata: Metadata = {
   title: "인공지능 페스타(AI FESTA) 2026",
   description: "AI Festa는 과학기술정보통신부가 지정한 국가 공식 '인공지능주간(AI Week)'의 대표 행사로, 대한민국 AI 산업 생태계를 이끄는 글로벌 비즈니스 플랫폼입니다.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+  },
   openGraph: {
     title: "인공지능 페스타(AI FESTA) 2026",
     description: "AI Festa는 과학기술정보통신부가 지정한 국가 공식 '인공지능주간(AI Week)'의 대표 행사로, 대한민국 AI 산업 생태계를 이끄는 글로벌 비즈니스 플랫폼입니다.",
